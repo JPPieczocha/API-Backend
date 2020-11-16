@@ -14,12 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         recetas.belongsTo(models.usuarios,
           {
             as: 'usuarios',
-            foreignKey: 'paciente'
-          }
-        )
-        recetas.belongsTo(models.usuarios,
-          {
-            as: 'usuarios',
+            foreignKey: 'paciente',
             foreignKey: 'autor'
           }
         )

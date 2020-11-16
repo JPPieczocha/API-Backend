@@ -13,13 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       turnos.belongsTo(models.usuarios,
         {
           as: 'usuarios',
-          foreignKey: 'medico'
-        }
-      )
-
-      turnos.belongsTo(models.usuarios,
-        {
-          as: 'usuarios',
+          foreignKey: 'medico',
           foreignKey: 'paciente'
         }
       )

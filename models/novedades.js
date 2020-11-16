@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       )
     }
   };
-  Novedades.init({
+  novedades.init({
     titulo: {
       type: DataTypes.STRING,
       allowNull: false
@@ -40,5 +40,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'novedades',
   });
-  return Novedades;
+  return novedades;
 };
