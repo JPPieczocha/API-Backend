@@ -1,35 +1,35 @@
 const Sequelize = require('sequelize')
-const rol = require('../models').rol
+const roles = require('../models').roles
 
 module.exports = {
 
     //Crear Rol
     create(req, res) {
-        return rol
+        return roles
             .create({
                 nombre: req.body.nombre
             })
-            .then(rol => res.status(200).send(rol))
+            .then(roles => res.status(200).send(roles))
             .catch(error => res.status(400).send(error))
     },
 
     //Listar roles
     listRol(_, res) {
-        return rol
+        return roles
             .findAll({})
-            .then(rol => res.status(200).send(rol))
+            .then(roles => res.status(200).send(roles))
             .catch(error => res.status(400).send(error))
     },
 
     //Buscar un rol
     findRol(req, res) {
-        return rol
+        return roles
             .findOne({
                 where: {
                     id: req.body.id
                 }
             })
-            .then(rol => res.status(200).send(rol))
+            .then(roles => res.status(200).send(roles))
             .catch(error => res.status(400).send(error))
     }
 
